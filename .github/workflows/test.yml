@@ -14,6 +14,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: check secret keys
+        run: echo ${{ secrets.AWS_ACCESS_KEY_ID }}
+
       # AWS 자격 증명 설정
       - name: Set up AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
